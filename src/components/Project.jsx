@@ -30,9 +30,12 @@ function Project() {
             <h6 className="mb-2 font-semibold">{project.title}</h6>
             <p className="mb-4 text-neutral-400">{project.description}</p>
             {project.technologies.map((tech,index)=>(
-                <span className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900" key={index}>
+                <motion.p 
+                whileHover={{scale: 1.2}}
+                transition={{duration:0.1}}
+                className="mr-3 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500 inline-flex border-b-2 cursor-pointer" key={index}>
                     {tech}
-                </span>
+                </motion.p>
             ))}
             </motion.div>
           </div>
