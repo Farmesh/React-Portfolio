@@ -20,7 +20,7 @@ function Project() {
                 initial={{x:-100,opacity:0}}
                 whileInView={{x:0,opacity:1}}
                 transition={{duration:0.5}}
-              className="mb-6 rounded" width={150} height={150} src={project.image} />
+              className="mb-6 rounded border-2 border-violet-500"  width={180} height={180} src={project.image} />
             </div>
             <motion.div 
             initial={{x:100,opacity:0}}
