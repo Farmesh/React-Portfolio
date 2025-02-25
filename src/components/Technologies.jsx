@@ -4,95 +4,58 @@ import {FaNodeJs} from 'react-icons/fa'
 import {SiMongodb, SiAngular, SiDotnet, SiCplusplus, SiC} from 'react-icons/si'
 import {SiNodedotjs} from 'react-icons/si'
 import {SiExpress} from 'react-icons/si'
-import { animate, motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-})
+const technologies = [
+  { icon: RiReactjsLine, name: "React", color: "text-cyan-400" },
+  { icon: SiNodedotjs, name: "Node.js", color: "text-green-500" },
+  { icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
+  { icon: SiExpress, name: "Express", color: "text-white" },
+  { icon: SiCplusplus, name: "C++", color: "text-blue-500" },
+  { icon: SiAngular, name: "Angular", color: "text-red-500" }
+]
 
+const TechCard = ({ icon: Icon, name, color, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ delay: index * 0.1 }}
+    whileHover={{ y: -5, scale: 1.05 }}
+    className="group relative"
+  >
+    <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur" />
+    <div className="relative flex flex-col items-center gap-2 rounded-2xl border-2 border-neutral-800 bg-neutral-900/50 p-6 transition duration-500 group-hover:border-transparent">
+      <Icon className={`text-6xl ${color} transition duration-500`} />
+      <span className="font-medium text-sm opacity-60 group-hover:opacity-100">{name}</span>
+    </div>
+  </motion.div>
+)
 
 function Technologies() {
   return (
-    <div className='border-b border-neutral-800 pb-24'>
+    <section className="py-20">
       <motion.h2
-      whileInView={{opacity:1,y:0}}
-      initial={{opacity:0,y:-100}}
-      transition={{duration:1.5}}
-      className='my-20 text-center text-4xl'>Technologies</motion.h2>
-    <motion.div 
-    whileInView={{opacity:1,x:0}}
-    initial={{opacity:0, x:-100}}
-    transition={{duration:1.5}}
-    className='flex flex-wrap items-center justify-center gap-4'
-    >
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="text-4xl font-thin text-center mb-16 bg-gradient-to-r from-cyan-300 via-purple-400 to-cyan-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
+      >
+        Technologies
+      </motion.h2>
 
-        
-    
-
-      <motion.div 
-        variants={iconVariants(2)}
-         initial="initial"
-        animate="animate" 
-        className='rounded-2xl border-4 border-neutral-800 p-4'>
-          <SiMongodb className='text-7xl text-green-500'/>
-        </motion.div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {technologies.map((tech, index) => (
+          <TechCard key={tech.name} {...tech} index={index} />
+        ))}
+      </div>
 
       <motion.div
-         variants={iconVariants(2.5)}
-         initial="initial"
-        animate="animate" 
-      className=' rounded-2xl border-4 border-neutral-800 p-4'>
-          <SiExpress className='text-7xl'/>
-        </motion.div>
-
-
-        <motion.div
-         variants={iconVariants(2.2)}
-         initial="initial"
-        animate="animate" className=' rounded-2xl border-4 border-neutral-800 p-4'>
-          <RiReactjsLine className='text-7xl text-cyan-400'/>
-        </motion.div>
-
-        <motion.div
-         variants={iconVariants(2.7)}
-         initial="initial"
-        animate="animate" className=' rounded-2xl border-4 border-neutral-800 p-4'>
-          <SiNodedotjs className='text-7xl text-green-500'/>
-        </motion.div>
-
-        <motion.div
-         variants={iconVariants(2.1)}
-         initial="initial"
-        animate="animate" className=' rounded-2xl border-4 border-neutral-800 p-4'>
-          <SiCplusplus className='text-7xl text-blue-500'/>
-        </motion.div>
-
-    
-
-        <motion.div
-         variants={iconVariants(2.8)}
-         initial="initial"
-        animate="animate" className=' rounded-2xl border-4 border-neutral-800 p-4'>
-          <SiAngular className='text-7xl text-red-500'/>
-        </motion.div>
-
-     
-
-        
-
-        
-      
-    </motion.div>
-    </div>
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mt-16 text-center text-neutral-400"
+      >
+        <p>And many more technologies in my toolkit...</p>
+      </motion.div>
+    </section>
   )
 }
 

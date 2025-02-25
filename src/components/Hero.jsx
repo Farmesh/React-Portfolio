@@ -1,66 +1,117 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/ProfileImg.webp";
 import { motion } from "framer-motion";
+import TypeWriter from "./TypeWriter";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import ParticleBackground from "./ParticleBackground";
 
-const container = (delay) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: delay },
-  },
-});
+const roles = [
+  "Full Stack Developer",
+  "React Specialist",
+  "UI/UX Enthusiast",
+  "Problem Solver"
+];
+
+const floatingAnimation = {
+  animate: {
+    y: [0, -20, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+};
 
 export const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="relative border-b border-neutral-900 pb-4 lg:mb-35 mt-24">
+      <ParticleBackground />
+      
       <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 px-6 lg:px-12">
           <div className="flex flex-col items-center lg:items-start">
-            <motion.h1 
-              variants={container(0)}
-              initial="hidden"
-              animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+            <motion.h1
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="pb-8 text-6xl font-thin tracking-tight lg:mt-8 lg:text-8xl"
             >
               Farmesh Kumar
             </motion.h1>
 
-            <motion.span
-              variants={container(0.5)}
-              initial="hidden"
-              animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500
-                bg-clip-text text-3xl tracking-tight text-transparent"
-            >
-              Full Stack Developer
-            </motion.span>
+            <TypeWriter words={roles} />
+
             <motion.p
-              variants={container(1)}
-              initial="hidden"
-              animate="visible"
-              className="my-2 max-w-xl font-light tracking-tighter"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="my-6 max-w-xl font-light tracking-tighter text-neutral-400 px-4 lg:px-0"
             >
               {HERO_CONTENT}
             </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex gap-4 px-4 lg:px-0"
+            >
+              <motion.a
+                href="/resume.pdf"
+                download
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-3 font-medium text-white shadow-lg hover:shadow-cyan-500/25"
+              >
+                <FaDownload /> Download CV
+              </motion.a>
+              
+              <motion.div className="flex gap-4">
+                <motion.a
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-xl text-white hover:bg-neutral-700"
+                >
+                  <FaGithub />
+                </motion.a>
+                <motion.a
+                  href="https://linkedin.com/in/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-xl text-white hover:bg-neutral-700"
+                >
+                  <FaLinkedin />
+                </motion.a>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 p-8">
-          <div className="flex justify-center">
-            <motion.img 
-            className="rounded-2xl"
-            height="70%" width="70%"
-            whileInView={{rotate:-32}}
-            animate={{rotate:0}}
-            whileHover={{rotate:0}}
-            transition={{ duration: 0.5 }}
-              // animate={{ x: 0, opacity: 1 }}
-              // transition={{ duration: 1, delay: 1.2 }}
-              // animate={{opacity:1, rotate: 360 }}
-             
-              src={profilePic} alt="Farmesh"
+
+        <div className="w-full lg:w-1/2 p-8 lg:p-12">
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 blur-2xl opacity-20" />
+            <motion.img
+              className="relative rounded-2xl"
+              src={profilePic}
+              alt="Farmesh"
+              width="70%"
+              height="70%"
+              whileHover={{
+                scale: 1.02,
+                rotate: 2,
+                transition: { duration: 0.3 }
+              }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

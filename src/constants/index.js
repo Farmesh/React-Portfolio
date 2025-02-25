@@ -40,33 +40,59 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Expense Tracker",
+    image: "https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A comprehensive expense tracking application with features like budget management, category-wise expense analysis, and visual reports. Users can track daily expenses, set budgets, and view spending patterns through interactive charts.",
+    technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Redux"],
+    link: "https://github.com/Farmesh/Expense-Tracker",
+    demoLink: "https://expense-tracker-farmesh.netlify.app/"
+  },
+  {
     title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    image: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication. Built with React, Node.js, and MongoDB.",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    link: "https://github.com/Farmesh/E-Commerce-Project",
+    demoLink: "https://e-commerce-farmesh.netlify.app/"
   },
   {
     title: "Nearby BusStation & PetrolPump Finder",
-    image: project2,
-    description:
-      "An application for Tracking Nearby Bus Stands and PetrolPumps within 2-3Km in Google Maps.",
-    technologies: ["GoogleAPI", "MongoDb", "React", "Node.js"],
+    image: "https://images.pexels.com/photos/744462/pexels-photo-744462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "An application for tracking nearby Bus Stands and PetrolPumps within 2-3Km using Google Maps API. Features real-time location updates and route planning.",
+    technologies: ["React", "Google Maps API", "Node.js", "MongoDB"],
+    link: "https://github.com/Farmesh/BusStation-PetrolPump-Finder",
+    demoLink: "https://location-finder-farmesh.netlify.app/"
   },
   {
     title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["React", "TailwindCSS"],
+    image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A modern portfolio website showcasing projects and skills. Features smooth animations, dark mode, and responsive design.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    link: "https://github.com/Farmesh/Portfolio-2024",
+    demoLink: "https://farmesh.netlify.app/"
   },
   {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    title: "Task Management Dashboard",
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A comprehensive task management system with real-time updates, team collaboration features, and progress tracking.",
+    technologies: ["React", "Firebase", "Material UI", "Redux"],
+    link: "https://github.com/Farmesh/Task-Management-System",
+    demoLink: "https://task-manager-farmesh.netlify.app/"
   },
+  {
+    title: "AI-Powered Chat Application",
+    image: "https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A modern chat application with AI-powered features like smart replies, sentiment analysis, and language translation.",
+    technologies: ["React", "Node.js", "Socket.io", "OpenAI API"],
+    link: "https://github.com/Farmesh/AI-Chat-App",
+    demoLink: "https://ai-chat-farmesh.netlify.app/"
+  }
 ];
 
 export const CONTACT = {
@@ -74,3 +100,41 @@ export const CONTACT = {
   phoneNo: "+91 7876602243",
   email: "thakurfarmesh123@gmail.com",
 };
+
+export const TESTIMONIALS = [
+  {
+    name: "Rahul Sharma",
+    role: "Senior Software Engineer at Microsoft India",
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
+    testimonial: "Farmesh is an exceptional developer with a keen eye for detail. His work on our collaborative project demonstrated strong technical skills and innovative problem-solving abilities.",
+    company: "Microsoft"
+  },
+  {
+    name: "Priya Patel",
+    role: "Tech Lead at Infosys",
+    image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=300",
+    testimonial: "Working with Farmesh was a great experience. His expertise in React and Node.js helped us deliver a complex project ahead of schedule. His communication skills and dedication are commendable.",
+    company: "Infosys"
+  },
+  {
+    name: "Amit Kumar",
+    role: "Full Stack Developer at TCS",
+    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300",
+    testimonial: "Farmesh's ability to quickly grasp complex requirements and turn them into elegant solutions is impressive. His work on our e-commerce platform showcased his full-stack development capabilities.",
+    company: "TCS"
+  },
+  {
+    name: "Neha Gupta",
+    role: "Product Manager at Wipro",
+    image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300",
+    testimonial: "I had the pleasure of managing Farmesh on a critical project. His technical acumen combined with his ability to understand business requirements made him an invaluable team member.",
+    company: "Wipro"
+  },
+  {
+    name: "Rajesh Verma",
+    role: "CTO at StartupName",
+    image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=300",
+    testimonial: "Farmesh's contribution to our startup was significant. His expertise in modern web technologies and commitment to quality code helped us build a robust and scalable platform.",
+    company: "TechStartup India"
+  }
+];

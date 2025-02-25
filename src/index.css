@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
 
 
@@ -8,4 +7,239 @@
 
 :root{
     font-family: "Playwrite+VN", sans-serif , 'Times New Roman', Times, serif;
+}
+
+/* Theme Styles */
+.theme-dark {
+  --primary-color: theme('colors.cyan.400');
+  --secondary-color: theme('colors.purple.500');
+  --background-color: theme('colors.neutral.950');
+  --card-color: theme('colors.neutral.900');
+  --text-color: theme('colors.neutral.300');
+}
+
+.theme-light {
+  --primary-color: theme('colors.cyan.600');
+  --secondary-color: theme('colors.purple.600');
+  --background-color: theme('colors.gray.50');
+  --card-color: theme('colors.white');
+  --text-color: theme('colors.gray.800');
+  --text-secondary: theme('colors.gray.600');
+  --border-color: theme('colors.gray.200');
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+.theme-cyberpunk {
+  --primary-color: theme('colors.yellow.400');
+  --secondary-color: theme('colors.pink.500');
+  --background-color: theme('colors.purple.950');
+  --card-color: theme('colors.purple.900');
+  --text-color: theme('colors.yellow.100');
+  --text-secondary: theme('colors.pink.300');
+  --border-color: theme('colors.pink.900');
+  --card-bg: rgba(88, 28, 135, 0.8);
+}
+
+.theme-minimal {
+  --primary-color: theme('colors.neutral.800');
+  --secondary-color: theme('colors.neutral.600');
+  --background-color: theme('colors.neutral.100');
+  --card-color: theme('colors.white');
+  --text-color: theme('colors.neutral.800');
+  --text-secondary: theme('colors.neutral.500');
+  --border-color: theme('colors.neutral.200');
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+  body {
+  }
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Better focus styles */
+:focus-visible {
+  outline: 2px solid theme('colors.cyan.500');
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Update hover and focus styles for light theme */
+.theme-light {
+  & .hover\:bg-neutral-700:hover {
+    @apply hover:bg-gray-200;
+  }
+  
+  & .bg-neutral-800 {
+    @apply bg-gray-100;
+  }
+  
+  & .bg-neutral-900\/50 {
+    @apply bg-white/90;
+  }
+  
+  & .text-neutral-400 {
+    @apply text-gray-600;
+  }
+  
+  & .border-neutral-800 {
+    @apply border-gray-200;
+  }
+}
+
+/* Add backdrop blur effect */
+.backdrop-blur-card {
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+/* Add these theme-specific styles */
+.theme-cyberpunk {
+  --primary-color: theme('colors.yellow.400');
+  --secondary-color: theme('colors.pink.500');
+  --background-color: theme('colors.purple.950');
+  --card-color: theme('colors.purple.900');
+  --text-color: theme('colors.yellow.100');
+  --text-secondary: theme('colors.pink.300');
+  --border-color: theme('colors.pink.900');
+  --card-bg: rgba(88, 28, 135, 0.8);
+}
+
+.theme-cyberpunk .bg-neutral-800 {
+  @apply bg-purple-800;
+}
+
+.theme-cyberpunk .text-neutral-400 {
+  @apply text-pink-300;
+}
+
+.theme-cyberpunk .border-neutral-800 {
+  @apply border-pink-900;
+}
+
+.theme-cyberpunk .hover\:bg-neutral-700:hover {
+  @apply hover:bg-purple-700;
+}
+
+.theme-minimal {
+  --primary-color: theme('colors.neutral.800');
+  --secondary-color: theme('colors.neutral.600');
+  --background-color: theme('colors.neutral.100');
+  --card-color: theme('colors.white');
+  --text-color: theme('colors.neutral.800');
+  --text-secondary: theme('colors.neutral.500');
+  --border-color: theme('colors.neutral.200');
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+.theme-minimal .bg-neutral-800 {
+  @apply bg-neutral-200;
+}
+
+.theme-minimal .text-neutral-400 {
+  @apply text-neutral-600;
+}
+
+.theme-minimal .border-neutral-800 {
+  @apply border-neutral-300;
+}
+
+.theme-minimal .hover\:bg-neutral-700:hover {
+  @apply hover:bg-neutral-300;
+}
+
+/* Add gradient animations for each theme */
+.theme-dark .animate-gradient {
+  @apply bg-gradient-to-r from-cyan-400 to-purple-500;
+  background-size: 200% auto;
+}
+
+.theme-light .animate-gradient {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+  background-size: 200% auto;
+}
+
+.theme-cyberpunk .animate-gradient {
+  @apply bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500;
+  background-size: 200% auto;
+}
+
+.theme-minimal .animate-gradient {
+  @apply bg-gradient-to-r from-neutral-800 to-neutral-600;
+  background-size: 200% auto;
+}
+
+/* Add these utility classes */
+.glass-effect {
+  @apply bg-neutral-900/80 backdrop-blur-md;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent;
+}
+
+.gradient-border {
+  @apply border border-transparent bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-border;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
 }
