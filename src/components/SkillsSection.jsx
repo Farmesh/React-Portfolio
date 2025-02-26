@@ -3,22 +3,22 @@ import { motion } from 'framer-motion';
 
 const skills = {
   "Frontend": [
-    { name: "React", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "Next.js", level: 80 },
-    { name: "Tailwind CSS", level: 95 }
+    { name: "React", level: 80 },
+    { name: "Angular", level: 55 },
+    { name: "JavaScript", level: 60 },
+    { name: "Tailwind CSS", level: 90 }
   ],
   "Backend": [
-    { name: "Node.js", level: 85 },
-    { name: "Python", level: 80 },
-    { name: "MongoDB", level: 85 },
-    { name: "PostgreSQL", level: 75 }
+    { name: "Node.js", level: 80 },
+    { name: "Dot Net", level: 85 },
+    { name: "MongoDB", level: 70 },
+    { name: "MSSQL", level: 60 }
   ],
   "Tools": [
-    { name: "Git", level: 90 },
-    { name: "Docker", level: 75 },
-    { name: "AWS", level: 70 },
-    { name: "CI/CD", level: 80 }
+    { name: "Git", level: 80 },
+    { name: "Github", level: 85 },
+    { name: "Postman", level: 70 },
+    { name: "Swagger", level: 70 }
   ]
 };
 

@@ -4,19 +4,15 @@ import { FaTrophy, FaMedal, FaCertificate } from 'react-icons/fa';
 
 const achievements = [
 
+ 
+
+  
   {
-    year: "2021-Present",
-    title: "Student of Computer Science and Engineering",
-    description: "Ram Devi Jindal Group of Institutions",
-    icon: FaCertificate,
-    color: "text-blue-500"
-  },
-  {
-    year: "July 2023 - August 2023",
-    title: "45 Days Core Python Training",
-    description: "TCIL pvt. Ltd",
-    icon: FaCertificate,
-    color: "text-green-500"
+    year: "2025-present",
+    title: "IT Intern (Dot net Developer)",
+    description: "Lord Mahavira Services pvt. Ltd",
+    icon: FaTrophy,
+    color: "text-yellow-500"
   },
   {
     year: "July 2024 - January 2025",
@@ -26,12 +22,20 @@ const achievements = [
     color: "text-red-500"
   },
   {
-    year: "2024",
-    title: "IT Intern",
-    description: "LMS pvt. Ltd",
-    icon: FaTrophy,
-    color: "text-yellow-500"
+    year: "July 2023 - August 2023",
+    title: "45 Days Core Python Training",
+    description: "TCIL pvt. Ltd",
+    icon: FaCertificate,
+    color: "text-green-500"
   },
+  {
+    year: "2021-Present",
+    title: "Student of Computer Science and Engineering",
+    description: "Ram Devi Jindal Group of Institutions",
+    icon: FaCertificate,
+    color: "text-blue-500"
+  },
+ 
  
   // Add more achievements
 ];

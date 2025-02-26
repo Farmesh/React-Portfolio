@@ -54,9 +54,9 @@ function App() {
                   <Project />
                 </BrowserRouter>
               </section>
-              <section id="testimonials" className="pt-20">
+              {/* <section id="testimonials" className="pt-20">
                 <Testimonials />
-              </section>
+              </section> */}
               <section id="github" className="pt-20">
                 <GitHubGraph />
               </section>

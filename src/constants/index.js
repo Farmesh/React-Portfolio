@@ -72,8 +72,8 @@ export const PROJECTS = [
     secondaryImage: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     description: "A modern portfolio website showcasing projects and skills. Features smooth animations, dark mode, and responsive design.",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "https://github.com/Farmesh/Portfolio-2024",
-    demoLink: "https://farmesh.netlify.app/"
+    link: "https://github.com/Farmesh/React-Portfolio",
+    demoLink: "https://farmesh-portfolio.netlify.app/"
   },
   // {
   //   title: "Task Management Dashboard",

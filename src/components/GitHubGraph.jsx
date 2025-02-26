@@ -4,10 +4,10 @@ import { FaGithub, FaCode, FaStar, FaCodeBranch } from 'react-icons/fa';
 
 const GitHubGraph = () => {
   const [stats, setStats] = useState({
-    contributions: 847,
-    repositories: 25,
-    stars: 156,
-    forks: 48
+    contributions: 406,
+    repositories: 50,
+    stars: 100,
+    forks: 5,
   });
 
   // Generate sample contribution data
