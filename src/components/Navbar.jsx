@@ -85,11 +85,11 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:w-full transition-all duration-300" />
                 </motion.a>
               ))}
-            </div>
+    </div>
 
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
-                <motion.a
+ <motion.a
                   key={social.label}
                   href={social.href}
                   target="_blank"
@@ -120,7 +120,7 @@ const Navbar = () => {
         onClose={() => setIsMenuOpen(false)}
         links={[...navLinks, ...socialLinks]}
       />
-    </nav>
+  </nav>
   );
 };
 

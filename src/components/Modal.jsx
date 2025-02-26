@@ -12,7 +12,7 @@ const Modal = ({ isOpen, project, onClose }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4"
-                onClick={onClose}
+            onClick={onClose}
             >
                 <motion.div
                     initial={{ scale: 0.9, y: 20 }}
@@ -27,9 +27,9 @@ const Modal = ({ isOpen, project, onClose }) => {
                             initial={{ scale: 1.2 }}
                             animate={{ scale: 1 }}
                             className="w-full h-full object-cover"
-                            src={project.image}
-                            alt={project.title}
-                        />
+                        src={project.image}
+                        alt={project.title}
+                    />
                         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
                         <motion.button
                             whileHover={{ scale: 1.1 }}
@@ -72,7 +72,7 @@ const Modal = ({ isOpen, project, onClose }) => {
                                     </motion.a>
                                 )}
                             </div>
-                        </div>
+                </div>
 
                         <p className="text-neutral-300 leading-relaxed">{project.description}</p>
 
@@ -97,9 +97,9 @@ const Modal = ({ isOpen, project, onClose }) => {
                                         <FaCode className="text-cyan-500" />
                                         {feature}
                                     </motion.li>
-                                ))}
-                            </ul>
-                        </div>
+                        ))}
+                    </ul>
+                </div>
 
                         <div className="space-y-4">
                             <h4 className="text-xl font-semibold text-cyan-400">Technologies Used</h4>
@@ -162,8 +162,8 @@ const Modal = ({ isOpen, project, onClose }) => {
                                     Live Demo
                                 </motion.a>
                             )}
-                        </div>
-                    </div>
+                </div>
+            </div>
                 </motion.div>
             </motion.div>
         </AnimatePresence>

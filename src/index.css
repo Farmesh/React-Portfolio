@@ -5,19 +5,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    font-family: "Playwrite+VN", sans-serif , 'Times New Roman', Times, serif;
+:root {
+  --primary: theme('colors.cyan.400');
+  --secondary: theme('colors.purple.500');
+  --background: theme('colors.neutral.950');
+  --text: theme('colors.neutral.300');
+  --accent: theme('colors.cyan.400');
+  --card: theme('colors.neutral.900');
+  --border: theme('colors.neutral.800');
+  --gradient: theme('colors.cyan.400');
+}
+
+/* Base styles */
+body {
+  @apply bg-[color:var(--background)] text-[color:var(--text)];
+}
+
+/* Theme-specific styles */
+.theme-dark {
+  --primary: theme('colors.cyan.400');
+  --secondary: theme('colors.purple.500');
+  --background: theme('colors.neutral.950');
+  --text: theme('colors.neutral.300');
+  --accent: theme('colors.cyan.400');
+  --card: theme('colors.neutral.900');
+  --border: theme('colors.neutral.800');
+}
+
+.theme-modern {
+  --primary: theme('colors.violet.500');
+  --secondary: theme('colors.fuchsia.500');
+  --background: theme('colors.zinc.950');
+  --text: theme('colors.violet.100');
+  --accent: theme('colors.violet.500');
+  --card: theme('colors.zinc.900');
+  --border: theme('colors.violet.800');
+}
+
+.theme-neon {
+  --primary: theme('colors.green.400');
+  --secondary: theme('colors.yellow.300');
+  --background: theme('colors.black');
+  --text: theme('colors.green.300');
+  --accent: theme('colors.green.400');
+  --card: theme('colors.zinc.950');
+  --border: theme('colors.green.900');
+}
+
+.theme-sunset {
+  --primary: theme('colors.orange.500');
+  --secondary: theme('colors.red.500');
+  --background: theme('colors.slate.950');
+  --text: theme('colors.orange.100');
+  --accent: theme('colors.orange.500');
+  --card: theme('colors.slate.900');
+  --border: theme('colors.orange.900');
+}
+
+/* Common styles */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r;
+}
+
+/* Theme-specific gradients */
+.theme-dark .gradient-text {
+  @apply from-cyan-400 to-purple-500;
+}
+
+.theme-modern .gradient-text {
+  @apply from-violet-500 via-fuchsia-500 to-pink-500;
+}
+
+.theme-neon .gradient-text {
+  @apply from-green-400 via-emerald-300 to-yellow-300;
+}
+
+.theme-sunset .gradient-text {
+  @apply from-orange-500 via-red-500 to-purple-600;
+}
+
+/* Transitions */
+* {
+  @apply transition-colors duration-300;
+}
+
+.glass-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+.gradient-bg {
+  background: var(--gradient);
 }
 
 /* Theme Styles */
-.theme-dark {
-  --primary-color: theme('colors.cyan.400');
-  --secondary-color: theme('colors.purple.500');
-  --background-color: theme('colors.neutral.950');
-  --card-color: theme('colors.neutral.900');
-  --text-color: theme('colors.neutral.300');
-}
-
 .theme-light {
   --primary-color: theme('colors.cyan.600');
   --secondary-color: theme('colors.purple.600');
@@ -49,13 +131,6 @@
   --text-secondary: theme('colors.neutral.500');
   --border-color: theme('colors.neutral.200');
   --card-bg: rgba(255, 255, 255, 0.9);
-}
-
-/* Apply theme variables */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
 }
 
 @keyframes blink {
@@ -232,14 +307,126 @@ html {
   @apply bg-neutral-900/80 backdrop-blur-md;
 }
 
-.gradient-text {
-  @apply bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent;
-}
-
 .gradient-border {
   @apply border border-transparent bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-border;
 }
 
 .hover-lift {
   @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* Theme-specific styles */
+.theme-light {
+  & .glass-card {
+    @apply bg-white/90 shadow-lg backdrop-blur-md;
+    box-shadow: var(--card-shadow);
+  }
+  
+  & .gradient-text {
+    @apply bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500;
+  }
+}
+
+.theme-cyberpunk {
+  & .glass-card {
+    @apply bg-slate-900/90 border-rose-500/20;
+    box-shadow: var(--neon-glow);
+  }
+  
+  & .gradient-text {
+    @apply bg-gradient-to-r from-rose-500 via-fuchsia-500 to-yellow-400;
+  }
+  
+  & .nav-link:hover {
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.8);
+  }
+}
+
+.theme-minimal {
+  & .glass-card {
+    @apply bg-neutral-900/90 border-emerald-500/20;
+    box-shadow: var(--accent-glow);
+  }
+  
+  & .gradient-text {
+    @apply bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500;
+  }
+  
+  & .button-glow:hover {
+    box-shadow: var(--accent-glow);
+  }
+}
+
+/* Theme-specific styles */
+.theme-modern {
+  & .glass-card {
+    @apply bg-zinc-900/90 border-violet-500/20;
+    box-shadow: var(--glow);
+  }
+  
+  & .gradient-text {
+    @apply bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500;
+    text-shadow: var(--text-glow);
+  }
+  
+  & .nav-link:hover {
+    text-shadow: var(--text-glow);
+  }
+  
+  & .button-primary {
+    @apply bg-gradient-to-r from-violet-500 to-fuchsia-500;
+    box-shadow: var(--glow);
+  }
+}
+
+.theme-neon {
+  & .glass-card {
+    @apply bg-black/90 border-green-500/20;
+    box-shadow: var(--neon-line);
+  }
+  
+  & .gradient-text {
+    @apply bg-gradient-to-r from-green-400 via-emerald-300 to-yellow-300;
+    text-shadow: var(--text-glow);
+  }
+  
+  & .nav-link:hover {
+    text-shadow: var(--neon-line);
+  }
+  
+  & .button-primary {
+    @apply bg-gradient-to-r from-green-400 to-emerald-300;
+    box-shadow: var(--neon-line);
+  }
+}
+
+.theme-sunset {
+  & .glass-card {
+    @apply bg-slate-900/90 border-orange-500/20;
+    box-shadow: var(--glow);
+  }
+  
+  & .gradient-text {
+    @apply bg-gradient-to-r from-orange-500 via-red-500 to-purple-600;
+    text-shadow: var(--text-glow);
+  }
+  
+  & .nav-link:hover {
+    text-shadow: var(--text-glow);
+  }
+  
+  & .button-primary {
+    @apply bg-gradient-to-r from-orange-500 to-red-500;
+    box-shadow: var(--glow);
+  }
+}
+
+/* Add animation keyframes for neon effect */
+@keyframes neon-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.theme-neon .neon-effect {
+  animation: neon-pulse 2s infinite;
 }

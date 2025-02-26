@@ -1,5 +1,4 @@
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/ProfileImg.webp";
 import { motion } from "framer-motion";
 import TypeWriter from "./TypeWriter";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -58,7 +57,7 @@ export const Hero = () => {
               className="flex gap-4 px-4 lg:px-0"
             >
               <motion.a
-                href="/resume.pdf"
+                href={`/assets/Farmesh_Resume.pdf`}
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -69,7 +68,7 @@ export const Hero = () => {
               
               <motion.div className="flex gap-4">
                 <motion.a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/Farmesh"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -78,7 +77,7 @@ export const Hero = () => {
                   <FaGithub />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/farmesh"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: -5 }}
@@ -101,10 +100,11 @@ export const Hero = () => {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 blur-2xl opacity-20" />
             <motion.img
               className="relative rounded-2xl"
-              src={profilePic}
+              src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Light"
               alt="Farmesh"
-              width="70%"
-              height="70%"
+              width="100%"
+              height="100%"
+              style={{ maxWidth: "400px", margin: "0 auto" }}
               whileHover={{
                 scale: 1.02,
                 rotate: 2,
