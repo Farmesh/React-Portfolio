@@ -3,9 +3,10 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am a passionate .NET and .NET Core developer with expertise in building enterprise-level web applications.I specialize in ASP.NET Core, C#, and Entity Framework, while also maintaining proficiency in both MEAN and MERN stacks. My strong foundation in Microsoft technologies, combined with knowledge of modern web development stacks, allows me to create robust, scalable solutions that drive business success and deliver exceptional user experiences.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a motivated and aspiring full-stack developer currently working as an intern at LMS Pvt. Ltd. as a .NET developer. As a fresher, I am eager to learn and grow in the field of web development, with a keen interest in building efficient and user-friendly applications. My technical skills include working with .NET, React, Node.js, and databases like MySQL and MongoDB. I enjoy solving complex problems, collaborating with teams, and continuously expanding my knowledge to adapt to new challenges. Outside of coding, I love exploring new technologies and contributing to open-source projects.`;
+
 
 // export const EXPERIENCES = [
 //   {
@@ -96,45 +97,45 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Chandigarh ,Sec 22C , 2615 , 160022 ",
+  address: "Chandigarh ,India ",
   phoneNo: "+91 7876602243",
   email: "thakurfarmesh123@gmail.com",
 };
 
-export const TESTIMONIALS = [
-  {
-    name: "Rahul Sharma",
-    role: "Senior Software Engineer at LMS pvt. Ltd",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
-    testimonial: "Farmesh is an exceptional developer with a keen eye for detail. His work on our collaborative project demonstrated strong technical skills and innovative problem-solving abilities.",
-    company: "LMS pvt. Ltd"
-  },
-  {
-    name: "Priya Patel",
-    role: "Tech Lead at CS soft Solutions",
-    image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=300",
-    testimonial: "Working with Farmesh was a great experience. His expertise in React and Node.js helped us deliver a complex project ahead of schedule. His communication skills and dedication are commendable.",
-    company: "CS soft Solutions"
-  },
-  {
-    name: "Amit Kumar",
-    role: "Full Stack Developer ",
-    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300",
-    testimonial: "Farmesh's ability to quickly grasp complex requirements and turn them into elegant solutions is impressive. His work on our e-commerce platform showcased his full-stack development capabilities.",
-    company: "CS soft Solutions"
-  },
-  {
-    name: "Neha Gupta",
-    role: " Manager at TCIL",
-    image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300",
-    testimonial: "I had the pleasure of managing Farmesh on a critical project. His technical acumen combined with his ability to understand business requirements made him an invaluable team member.",
-    company: "TCIL pvt. Ltd"
-  },
-  {
-    name: "Rajesh Verma",
-    role: "Chairman",
-    image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=300",
-    testimonial: "Farmesh's contribution to our startup was significant. His expertise in modern web technologies and commitment to quality code helped us build a robust and scalable platform.",
-    company: "Ram Devi Jindal Group of Institutions"
-  }
-];
+// export const TESTIMONIALS = [
+//   {
+//     name: "Rahul Sharma",
+//     role: "Senior Software Engineer at LMS pvt. Ltd",
+//     image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
+//     testimonial: "Farmesh is an exceptional developer with a keen eye for detail. His work on our collaborative project demonstrated strong technical skills and innovative problem-solving abilities.",
+//     company: "LMS pvt. Ltd"
+//   },
+//   {
+//     name: "Priya Patel",
+//     role: "Tech Lead at CS soft Solutions",
+//     image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=300",
+//     testimonial: "Working with Farmesh was a great experience. His expertise in React and Node.js helped us deliver a complex project ahead of schedule. His communication skills and dedication are commendable.",
+//     company: "CS soft Solutions"
+//   },
+//   {
+//     name: "Amit Kumar",
+//     role: "Full Stack Developer ",
+//     image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300",
+//     testimonial: "Farmesh's ability to quickly grasp complex requirements and turn them into elegant solutions is impressive. His work on our e-commerce platform showcased his full-stack development capabilities.",
+//     company: "CS soft Solutions"
+//   },
+//   {
+//     name: "Neha Gupta",
+//     role: " Manager at TCIL",
+//     image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300",
+//     testimonial: "I had the pleasure of managing Farmesh on a critical project. His technical acumen combined with his ability to understand business requirements made him an invaluable team member.",
+//     company: "TCIL pvt. Ltd"
+//   },
+//   {
+//     name: "Rajesh Verma",
+//     role: "Chairman",
+//     image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=300",
+//     testimonial: "Farmesh's contribution to our startup was significant. His expertise in modern web technologies and commitment to quality code helped us build a robust and scalable platform.",
+//     company: "Ram Devi Jindal Group of Institutions"
+//   }
+// ];

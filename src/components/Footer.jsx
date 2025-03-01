@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPaperPlane, FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import { CONTACT } from '../constants';
+import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -18,21 +19,24 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { 
-      icon: FaGithub, 
-      url: "https://github.com/Farmesh", 
-      label: "GitHub" 
+    {
+      href: "https://github.com/Farmesh",
+      icon: FaGithub,
+      label: "GitHub",
+      color: "hover:text-purple-500"
     },
-    { 
-      icon: FaLinkedin, 
-      url: "https://linkedin.com/in/farmesh-thakur",
-      label: "LinkedIn" 
+    {
+      href: "https://www.linkedin.com/in/farmeshkumar",
+      icon: FaLinkedin,
+      label: "LinkedIn",
+      color: "hover:text-cyan-500"
     },
-    { 
-      icon: FaTwitter, 
-      url: "https://twitter.com/farmesh_thakur",
-      label: "Twitter" 
-    },
+    {
+      href: "https://www.instagram.com/farmesh_09",
+      icon: FaInstagram,
+      label: "Instagram",
+      color: "hover:text-pink-500"
+    }
   ];
 
   return (
@@ -87,7 +91,7 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}
@@ -103,7 +107,23 @@ const Footer = () => {
                   <social.icon />
                 </motion.a>
               ))}
+            </div> */}
+
+<div className="flex items-center gap-4">
+              {socialLinks.map((social) => (
+ <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -2 }}
+                  className={`text-xl text-neutral-400 ${social.color} transition-colors`}
+                >
+                  <social.icon />
+                </motion.a>
+              ))}
             </div>
+
           </div>
 
           {/* Newsletter Section */}

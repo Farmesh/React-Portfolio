@@ -5,8 +5,8 @@ import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import ParticleBackground from "./ParticleBackground";
 
 const roles = [
-  "Full Stack Developer",
-  "React Specialist",
+  "Full Stack Developer(MERN/MEAN)",
+  ".Net Developer",
   "UI/UX Enthusiast",
   "Problem Solver"
 ];
@@ -57,7 +57,7 @@ export const Hero = () => {
               className="flex gap-4 px-4 lg:px-0"
             >
               <motion.a
-                href={`/assets/Farmesh_Resume.pdf`}
+                href="https://drive.google.com/file/d/1i_1B57W-BuxAe6H4nd6WOf-lRMQK0qX9/view?usp=sharing"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

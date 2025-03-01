@@ -6,13 +6,30 @@ import {SiNodedotjs} from 'react-icons/si'
 import {SiExpress} from 'react-icons/si'
 import { motion } from 'framer-motion'
 
+import {SiMysql} from 'react-icons/si'
+import {SiStripe} from 'react-icons/si'
+import {SiTailwindcss} from 'react-icons/si'
+import {SiNpm} from 'react-icons/si'
+import {SiRender} from 'react-icons/si'
+import {SiNetlify} from 'react-icons/si'
+
+
+
 const technologies = [
   { icon: RiReactjsLine, name: "React", color: "text-cyan-400" },
   { icon: SiNodedotjs, name: "Node.js", color: "text-green-500" },
   { icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
   { icon: SiExpress, name: "Express", color: "text-white" },
   { icon: SiCplusplus, name: "C++", color: "text-blue-500" },
-  { icon: SiAngular, name: "Angular", color: "text-red-500" }
+  { icon: SiAngular, name: "Angular", color: "text-red-500" },
+  { icon: SiDotnet, name: ".NET", color: "text-green-600" },
+// { icon: SiCsharp, name: "C#", color: "text-purple-600" },
+{ icon: SiMysql, name: "SQL", color: "text-blue-400" },
+{ icon: SiStripe, name: "Stripe", color: "text-indigo-500" },
+{ icon: SiTailwindcss, name: "Tailwind CSS", color: "text-sky-400" },  // CSS framework
+{ icon: SiNpm, name: "npm", color: "text-green-400" },  // Package manager
+{ icon: SiRender, name: "Render", color: "text-indigo-600" },  // Cloud platform for full-stack apps
+{ icon: SiNetlify, name: "Netlify", color: "text-teal-500" },  // Hosting and serverless functions
 ]
 
 const TechCard = ({ icon: Icon, name, color, index }) => (
