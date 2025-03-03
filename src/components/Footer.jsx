@@ -90,8 +90,8 @@ const Footer = () => {
               </motion.div>
             </div>
 
-            {/* Social Links */}
-            {/* <div className="flex gap-4">
+            {/* Social Links */} 
+            <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}
@@ -107,9 +107,9 @@ const Footer = () => {
                   <social.icon />
                 </motion.a>
               ))}
-            </div> */}
+            </div>
 
-<div className="flex items-center gap-4">
+{/* <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
  <motion.a
                   key={social.label}
@@ -122,7 +122,7 @@ const Footer = () => {
                   <social.icon />
                 </motion.a>
               ))}
-            </div>
+            </div> */}
 
           </div>
 
@@ -141,7 +141,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-neutral-400"
             >
-              Subscribe to my newsletter for the latest tech insights and project updates.
+              Subscribe to my newsletter for the latest project updates.
             </motion.p>
 
             <form onSubmit={handleSubmit} className="relative">

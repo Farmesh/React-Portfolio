@@ -8,15 +8,22 @@ const achievements = [
 
   
   {
-    year: "2025-present",
+    year: "2024-present",
     title: "IT Intern (Dot net Developer)",
     description: "Lord Mahavira Services pvt. Ltd",
     icon: FaTrophy,
     color: "text-yellow-500"
   },
   {
-    year: "July 2024 - January 2025",
-    title: "6 Months Full Stack Development Training",
+    year: "2021-Present",
+    title: "Student of Computer Science and Engineering",
+    description: "Ram Devi Jindal Group of Institutions",
+    icon: FaCertificate,
+    color: "text-blue-500"
+  },
+  {
+    year: "June 2024 - November 2024",
+    title: "Full Stack Development Training",
     description: "CS soft Solutions",
     icon: FaCertificate,
     color: "text-red-500"

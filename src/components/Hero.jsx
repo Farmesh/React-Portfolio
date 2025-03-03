@@ -57,7 +57,7 @@ export const Hero = () => {
               className="flex gap-4 px-4 lg:px-0"
             >
               <motion.a
-                href="https://drive.google.com/file/d/1i_1B57W-BuxAe6H4nd6WOf-lRMQK0qX9/view?usp=sharing"
+                href="https://drive.google.com/file/d/13EYVxaKyYLX2M3972z5AFE9NYprU9TfB/view?usp=sharing"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

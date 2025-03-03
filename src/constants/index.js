@@ -1,7 +1,4 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+
 
 export const HERO_CONTENT = `I am a passionate .NET and .NET Core developer with expertise in building enterprise-level web applications.I specialize in ASP.NET Core, C#, and Entity Framework, while also maintaining proficiency in both MEAN and MERN stacks. My strong foundation in Microsoft technologies, combined with knowledge of modern web development stacks, allows me to create robust, scalable solutions that drive business success and deliver exceptional user experiences.`;
 
@@ -45,7 +42,7 @@ export const PROJECTS = [
     image: "https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     secondaryImage: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     description: "A comprehensive expense tracking application with features like budget management, category-wise expense analysis, and visual reports. Users can track daily expenses, set budgets, and view spending patterns through interactive charts.",
-    technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Redux"],
+    technologies: ["React", "Node.js", "MongoDB", ],
     link: "https://github.com/Farmesh/Expense-Tracker",
     demoLink: "https://farmeshexpenses.netlify.app/"
   },
@@ -63,7 +60,7 @@ export const PROJECTS = [
     image: "https://images.pexels.com/photos/744462/pexels-photo-744462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     secondaryImage: "https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     description: "An application for tracking nearby Bus Stands and PetrolPumps within 2-3Km using Google Maps API. Features real-time location updates and route planning.",
-    technologies: ["React", "Google Maps API", "Node.js", "MongoDB"],
+    technologies: ["React", "Google Maps API", "Node.js", "MongoDB" ,"Smart India Hackathon"],
     link: "https://github.com/Farmesh/BusStation-PetrolPump-Finder",
     demoLink: "https://location-finder-farmesh.netlify.app/"
   },

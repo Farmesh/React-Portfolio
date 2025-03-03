@@ -33,7 +33,7 @@ const Newsletter = () => {
       >
         <h2 className="text-4xl font-thin mb-4">Stay Updated</h2>
         <p className="text-neutral-400 mb-8">
-          Subscribe to my newsletter for the latest tech insights and project updates.
+          Subscribe to my newsletter for the latest project updates.
         </p>
 
         <form onSubmit={handleSubmit} className="relative max-w-md mx-auto">
