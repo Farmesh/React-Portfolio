@@ -53,53 +53,6 @@ export const themes = {
   }
 };
 
-// Update theme styles
-const themeStyles = {
-  dark: {
-    '--card-shadow': '0 4px 6px -1px rgba(0, 0, 0, 0.3)',
-    '--hover-shadow': '0 10px 15px -3px rgba(0, 0, 0, 0.3)',
-    '--text-secondary': 'rgb(156, 163, 175)',
-    '--border-color': 'rgb(31, 41, 55)',
-    '--card-bg': 'rgba(17, 24, 39, 0.8)',
-    '--backdrop-blur': 'blur(8px)',
-    '--gradient': 'linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to))'
-  },
-  modern: {
-    '--card-shadow': '0 4px 20px -1px rgba(139, 92, 246, 0.2)',
-    '--hover-shadow': '0 10px 25px -3px rgba(139, 92, 246, 0.25)',
-    '--text-secondary': 'rgb(196, 181, 253)',
-    '--border-color': 'rgb(91, 33, 182)',
-    '--card-bg': 'rgba(24, 24, 27, 0.8)',
-    '--backdrop-blur': 'blur(12px)',
-    '--gradient': 'linear-gradient(-45deg, #8b5cf6, #d946ef, #ec4899)',
-    '--glow': '0 0 20px rgba(139, 92, 246, 0.3)',
-    '--text-glow': '0 0 10px rgba(139, 92, 246, 0.5)'
-  },
-  neon: {
-    '--card-shadow': '0 4px 20px -1px rgba(74, 222, 128, 0.2)',
-    '--hover-shadow': '0 10px 25px -3px rgba(74, 222, 128, 0.25)',
-    '--text-secondary': 'rgb(134, 239, 172)',
-    '--border-color': 'rgb(21, 128, 61)',
-    '--card-bg': 'rgba(9, 9, 11, 0.8)',
-    '--backdrop-blur': 'blur(12px)',
-    '--gradient': 'linear-gradient(45deg, #4ade80, #34d399, #fde047)',
-    '--glow': '0 0 30px rgba(74, 222, 128, 0.3)',
-    '--text-glow': '0 0 15px rgba(74, 222, 128, 0.5)',
-    '--neon-line': '0 0 5px #4ade80, 0 0 10px #4ade80, 0 0 20px #4ade80'
-  },
-  sunset: {
-    '--card-shadow': '0 4px 20px -1px rgba(249, 115, 22, 0.2)',
-    '--hover-shadow': '0 10px 25px -3px rgba(249, 115, 22, 0.25)',
-    '--text-secondary': 'rgb(253, 186, 116)',
-    '--border-color': 'rgb(154, 52, 18)',
-    '--card-bg': 'rgba(15, 23, 42, 0.8)',
-    '--backdrop-blur': 'blur(12px)',
-    '--gradient': 'linear-gradient(to right, #f97316, #ef4444, #7c3aed)',
-    '--glow': '0 0 20px rgba(249, 115, 22, 0.3)',
-    '--text-glow': '0 0 10px rgba(249, 115, 22, 0.5)'
-  }
-};
-
 export const ThemeProvider = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState('dark');
 

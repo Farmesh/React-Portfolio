@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCode } from 'react-icons/fa';
 
-const ProjectFilters = ({ filters, activeFilter, setActiveFilter }) => {
+const ProjectFilters = ({ filters, activeFilter: _activeFilter, setActiveFilter }) => {
   const [selectedFilters, setSelectedFilters] = useState(new Set());
   const [showAll, setShowAll] = useState(true);
 

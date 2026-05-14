@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaLink, FaTimes, FaGithub, FaExternalLinkAlt, FaCode } from 'react-icons/fa';
+import { FaTimes, FaGithub, FaExternalLinkAlt, FaCode } from 'react-icons/fa';
 
 const Modal = ({ isOpen, project, onClose }) => {
     if (!isOpen || !project) return null;

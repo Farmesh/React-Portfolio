@@ -25,7 +25,7 @@ const MobileMenu = ({ isOpen, onClose, links }) => {
               <FaTimes />
             </button>
             <nav className="mt-12 flex flex-col gap-4">
-              {links.map((link) => (
+              {links.filter((link) => link.href?.startsWith('#')).map((link) => (
                 <motion.a
                   key={link.href}
                   href={link.href}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCalendar, FaClock, FaTags } from 'react-icons/fa';
+import { FaCalendar, FaClock } from 'react-icons/fa';
 
 const blogPosts = [
   {

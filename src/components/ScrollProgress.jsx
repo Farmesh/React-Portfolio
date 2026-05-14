@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll } from 'framer-motion';
 
 const ScrollProgress = () => {

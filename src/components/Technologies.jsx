@@ -1,7 +1,6 @@
 import React from 'react'
 import {RiReactjsLine} from 'react-icons/ri'
-import {FaNodeJs} from 'react-icons/fa'
-import {SiMongodb, SiAngular, SiDotnet, SiCplusplus, SiC} from 'react-icons/si'
+import {SiMongodb, SiAngular, SiDotnet, SiCplusplus} from 'react-icons/si'
 import {SiNodedotjs} from 'react-icons/si'
 import {SiExpress} from 'react-icons/si'
 import { motion } from 'framer-motion'
@@ -40,8 +39,8 @@ const TechCard = ({ icon: Icon, name, color, index }) => (
     whileHover={{ y: -5, scale: 1.05 }}
     className="group relative"
   >
-    <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur" />
-    <div className="relative flex flex-col items-center gap-2 rounded-2xl border-2 border-neutral-800 bg-neutral-900/50 p-6 transition duration-500 group-hover:border-transparent">
+    <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-0 blur transition duration-500 group-hover:opacity-70" />
+    <div className="relative flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 p-6 transition duration-500 group-hover:border-transparent">
       <Icon className={`text-6xl ${color} transition duration-500`} />
       <span className="font-medium text-sm opacity-60 group-hover:opacity-100">{name}</span>
     </div>
@@ -54,10 +53,13 @@ function Technologies() {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl font-thin text-center mb-16 bg-gradient-to-r from-cyan-300 via-purple-400 to-cyan-300 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
+        className="mb-4 text-center text-4xl font-black text-white"
       >
-        Technologies
+        Technology Stack
       </motion.h2>
+      <p className="mx-auto mb-16 max-w-3xl text-center text-lg leading-8 text-slate-400">
+        I use proven tools to create websites that are good-looking, maintainable, and ready to grow.
+      </p>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
         {technologies.map((tech, index) => (
@@ -68,9 +70,9 @@ function Technologies() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="mt-16 text-center text-neutral-400"
+        className="mt-16 text-center text-slate-400"
       >
-        <p>And many more technologies in my toolkit...</p>
+        <p>Design, frontend, backend, database, payment, and deployment support in one place.</p>
       </motion.div>
     </section>
   )

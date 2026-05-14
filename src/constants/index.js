@@ -1,8 +1,8 @@
 
 
-export const HERO_CONTENT = `I am a passionate .NET and .NET Core developer with expertise in building enterprise-level web applications.I specialize in ASP.NET Core, C#, and Entity Framework, while also maintaining proficiency in both MEAN and MERN stacks. My strong foundation in Microsoft technologies, combined with knowledge of modern web development stacks, allows me to create robust, scalable solutions that drive business success and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I build fast, modern websites and web applications for businesses, creators, shops, institutes, and service providers who want a professional online presence that turns visitors into real enquiries.`;
 
-export const ABOUT_TEXT = `I am a motivated and aspiring full-stack developer currently working as an intern at LMS Pvt. Ltd. as a .NET developer. As a fresher, I am eager to learn and grow in the field of web development, with a keen interest in building efficient and user-friendly applications. My technical skills include working with .NET, React, Node.js, and databases like MySQL and MongoDB. I enjoy solving complex problems, collaborating with teams, and continuously expanding my knowledge to adapt to new challenges. Outside of coding, I love exploring new technologies and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am Farmesh Kumar, a freelance web developer focused on practical business websites: portfolio sites, landing pages, e-commerce experiences, dashboards, and custom web apps. I work with React, Tailwind CSS, .NET, Node.js, and databases to create clean interfaces, reliable features, and responsive pages that look sharp on every screen.`;
 
 
 // export const EXPERIENCES = [
@@ -37,6 +37,15 @@ export const ABOUT_TEXT = `I am a motivated and aspiring full-stack developer cu
 // ];
 
 export const PROJECTS = [
+  {
+    title: "Cheema SSB Dormitory",
+    image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    secondaryImage: "https://images.pexels.com/photos/5998051/pexels-photo-5998051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "A professional website created for Cheema SSB Dormitory to present rooms, facilities, location details, and contact information clearly for visitors looking for accommodation.",
+    technologies: ["Business Website", "Responsive Design", "SEO Basics", "Deployment"],
+    link: "https://cheemassbdormitory.in/",
+    demoLink: "https://cheemassbdormitory.in/"
+  },
   {
     title: "Expense Tracker",
     image: "https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

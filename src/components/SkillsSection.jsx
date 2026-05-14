@@ -2,23 +2,23 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = {
-  "Frontend": [
-    { name: "React", level: 80 },
-    { name: "Angular", level: 55 },
-    { name: "JavaScript", level: 60 },
-    { name: "Tailwind CSS", level: 90 }
+  "Client Experience": [
+    { name: "Responsive UI", level: 95 },
+    { name: "Landing Pages", level: 90 },
+    { name: "Conversion Layouts", level: 85 },
+    { name: "Animations", level: 80 }
   ],
-  "Backend": [
+  "Web Development": [
+    { name: "React", level: 85 },
+    { name: ".NET APIs", level: 85 },
     { name: "Node.js", level: 80 },
-    { name: "Dot Net", level: 85 },
-    { name: "MongoDB", level: 70 },
-    { name: "MSSQL", level: 60 }
+    { name: "Databases", level: 75 }
   ],
-  "Tools": [
-    { name: "Git", level: 80 },
-    { name: "Github", level: 85 },
-    { name: "Postman", level: 70 },
-    { name: "Swagger", level: 70 }
+  "Launch Support": [
+    { name: "SEO Basics", level: 80 },
+    { name: "Hosting", level: 85 },
+    { name: "Testing", level: 80 },
+    { name: "Maintenance", level: 85 }
   ]
 };
 
@@ -31,14 +31,14 @@ const SkillBar = ({ name, level }) => (
   >
     <div className="flex justify-between mb-1">
       <span className="text-sm font-medium">{name}</span>
-      <span className="text-sm text-neutral-400">{level}%</span>
+      <span className="text-sm text-slate-400">{level}%</span>
     </div>
-    <div className="h-2 bg-neutral-800 rounded-full overflow-hidden">
+    <div className="h-2 overflow-hidden rounded-full bg-slate-800">
       <motion.div
         initial={{ width: 0 }}
         whileInView={{ width: `${level}%` }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="h-full bg-gradient-to-r from-cyan-500 to-purple-500"
+        className="h-full bg-gradient-to-r from-emerald-400 to-cyan-400"
       />
     </div>
   </motion.div>
@@ -50,9 +50,9 @@ const SkillsSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl font-thin text-center mb-16"
+        className="mb-16 text-center text-4xl font-black text-white"
       >
-        Skills & Expertise
+        How I Help Clients Win
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -61,7 +61,7 @@ const SkillsSection = () => {
             key={category}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="bg-neutral-900/50 p-6 rounded-xl"
+            className="rounded-xl border border-white/10 bg-slate-900/70 p-6"
           >
             <h3 className="text-xl font-medium mb-6 text-center">{category}</h3>
             {categorySkills.map((skill) => (

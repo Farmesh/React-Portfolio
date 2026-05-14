@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaCode, FaStar, FaCodeBranch } from 'react-icons/fa';
 
 const GitHubGraph = () => {
-  const [stats, setStats] = useState({
+  const [stats] = useState({
     contributions: 406,
     repositories: 50,
     stars: 100,

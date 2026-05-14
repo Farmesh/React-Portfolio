@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { PROJECTS } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaLink, FaEye, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaEye } from 'react-icons/fa';
 import Modal from './Modal';
-import { useTheme } from './ThemeProvider';
 
 function Project() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,21 +23,24 @@ function Project() {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl font-bold text-center mb-12 gradient-text"
+        className="mb-4 text-center text-4xl font-black text-white"
       >
-        Featured Projects
+        Proof of Work
       </motion.h2>
+      <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-8 text-slate-400">
+        These projects show the kind of websites and web apps I can create for clients: clean layouts, useful features, and real deployment.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         <AnimatePresence>
           {PROJECTS.map((project, index) => (
             <motion.div
-              key={project.id}
+              key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card rounded-xl overflow-hidden hover-lift"
+              className="overflow-hidden rounded-xl border border-white/10 bg-slate-900/70 shadow-xl shadow-slate-950/20"
             >
               <div className="relative group">
                 <img
@@ -49,25 +51,25 @@ function Project() {
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <button
                     onClick={() => openModal(project)}
-                    className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors"
+                    className="flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
                   >
-                    View Details
+                    <FaEye /> View Details
                   </button>
                 </div>
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 gradient-text">
+                <h3 className="mb-2 text-xl font-bold text-white">
                   {project.title}
                 </h3>
-                <p className="text-neutral-400 mb-4 line-clamp-2">
+                <p className="mb-4 line-clamp-2 text-slate-400">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 text-sm rounded-full bg-neutral-800 text-neutral-300"
+                      className="rounded-full bg-slate-800 px-2 py-1 text-sm text-slate-300"
                     >
                       {tech}
                     </span>
@@ -75,19 +77,21 @@ function Project() {
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href={project.github}
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-400 hover:text-white transition-colors"
+                    aria-label={`${project.title} source code`}
+                    className="text-slate-400 transition-colors hover:text-white"
                   >
                     <FaGithub className="text-xl" />
                   </a>
-                  {project.demo && (
+                  {project.demoLink && (
                     <a
-                      href={project.demo}
+                      href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-neutral-400 hover:text-white transition-colors"
+                      aria-label={`${project.title} live website`}
+                      className="text-slate-400 transition-colors hover:text-white"
                     >
                       <FaExternalLinkAlt className="text-xl" />
                     </a>
